@@ -1,0 +1,10 @@
+{
+    "name": "docsify-jspider-theme",
+    "version": "1.2.1",
+    "main": "JSpiderTheme.css",
+    "license": "MIT",
+    "author": "KonghaYao <20192831006@m.scnu.edu.cn>",
+    "scripts": {
+        "dev": "stylus -w ./stylus/index.styl -o index.css"
+    }
+}

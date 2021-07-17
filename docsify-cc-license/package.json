@@ -1,0 +1,15 @@
+{
+    "name": "docsify-cc-license",
+    "version": "1.0.2",
+    "description": "在 docsify 中插入 [cc 协议标识](https://creativecommons.org/choose/) 的插件",
+    "main": "docsify-cc-license.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "cc-license",
+        "docsify"
+    ],
+    "author": "KonghaYao <20192831006@m.scnu.edu.cn>",
+    "license": "MIT"
+}

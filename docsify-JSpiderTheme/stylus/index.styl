@@ -1,0 +1,244 @@
+
+$color-primary = #42b983
+$color-bg = #fff
+$color-text = #34495e
+$sidebar-width = 300px
+
+@import './basic/fontAndIcon'
+@import './basic/_layout'
+@import './basic/_coverpage'
+body
+  background-color $color-bg
+
+article
+  & >  p 
+    text-indent 2em 
+
+::marker 
+    font-weight bolder 
+    border-right 0.5em 
+
+/* sidebar */
+.sidebar
+  background-color $color-bg
+  color #364149
+
+  li
+    margin 6px 0 6px 0
+
+  ul li a
+    color #505d6b
+    font-size 14px
+    font-weight normal
+    overflow hidden
+    text-decoration none
+    text-overflow ellipsis
+    white-space nowrap
+
+    &:hover
+      text-decoration underline
+
+  ul li ul
+    padding 0
+
+  ul li.active > a
+    border-right 2px solid
+    color var(--theme-color, $color-primary)
+    font-weight 600
+
+.app-sub-sidebar
+  li
+    &::before
+      content '-'
+      padding-right 4px
+      float left
+
+/* markdown content found on pages */
+.markdown-section 
+    color #000000c9 
+    background-image linear-gradient(90deg, rgba(60, 10, 30, 0.04) 3%, transparent 0), linear-gradient(1turn, rgba(60, 10, 30, 0.04) 3%, transparent 0) 
+    background-size 20px 20px 
+    background-position 50% 
+
+
+    h1,h2,h3,h4,strong
+        color #2c3e50
+        font-weight 600
+
+    a
+        color var(--theme-color, $color-primary)
+        font-weight 600
+
+    h1
+        font-size 2rem
+        margin 0 0 1rem
+
+    h2
+        font-size 1.75rem
+        margin 45px 0 0.8rem
+
+    h3
+        font-size 1.5rem
+        margin 40px 0 0.6rem
+
+    h4
+        font-size 1.25rem
+
+    h5
+        font-size 1rem
+
+    h6
+        color #777
+        font-size 1rem
+
+    figure,  p
+        margin 1.2em 0
+
+    p,  ul,  ol
+        line-height 1.6rem
+        word-spacing 0.05rem
+
+    ul,  ol
+        padding-left 1.5rem
+
+    blockquote
+        border-left 4px solid var(--theme-color, $color-primary)
+        color #858585
+        margin 2em 0
+        padding-left 20px
+
+    blockquote p
+        font-weight 600
+        margin-left 0
+
+    iframe
+        margin 1em 0
+
+    em
+        color #7f8c8d
+
+    code,
+    pre,
+    .output::after
+        font-family Roboto Mono, Monaco, courier, monospace, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", Arial 
+
+    code,
+    pre
+        background-color #fff
+        border-radius 1em
+
+    pre,
+    output
+        margin 1.2em 0
+        position relative
+
+    pre > code,
+    output
+        border-radius 2px
+        display block
+
+    pre > code,
+    output::after
+        -moz-osx-font-smoothing initial
+        -webkit-font-smoothing initial
+
+    code
+        border-radius 2px
+        color #e96900
+        margin 0 2px
+        padding 3px 5px
+        white-space pre-wrap
+
+    & > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) code
+        font-size 0.8rem
+
+    pre
+        padding 0 1.4rem
+        line-height 1.5rem
+        overflow auto
+        word-wrap normal
+        border-radius 10px
+        box-shadow #d0d0d0 2px 5px 20px
+    pre:before 
+            position  absolute 
+            top  0.5rem 
+            left  0.5rem 
+            content  '' 
+            height  1em 
+            width  20% 
+            background-color  transparent 
+            background-repeat  no-repeat 
+            background-image  url(./dots.svg) 
+        
+    pre > code
+        color #525252
+        font-size 0.8rem
+        padding 2.2em 5px
+        line-height inherit
+        margin 0 2px
+        max-width inherit
+        overflow inherit
+        white-space inherit
+
+    output
+        padding 1.7rem 1.4rem
+        border 1px dotted #ccc
+
+    output > :first-child
+        margin-top 0 
+
+    output > :last-child
+        margin-bottom 0 
+
+    code::after,  code::before,
+    output::after,  output::before
+        letter-spacing 0.05rem
+
+    pre::after,
+    output::after
+        color #ccc
+        font-size 0.6rem
+        font-weight 600
+        height 15px
+        line-height 15px
+        padding 5px 10px 0
+        position absolute
+        right 0
+        text-align right
+        top 0
+
+    pre::after
+    output::after
+        content attr(data-lang)
+
+
+
+code .token
+  -moz-osx-font-smoothing initial
+  -webkit-font-smoothing initial
+  min-height 1.5rem
+  position relative
+  left auto
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar 
+    width 7px 
+    height 7px 
+    background-color #f5f5f5 
+    border-radius 5px 
+
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb 
+    border-radius 10px 
+    box-shadow inset 0 0 6px rgba(0, 0, 0, 0.1) 
+    -webkit-box-shadow inset 0 0 6px rgba(0, 0, 0, 0.1) 
+    background-color #c8c8c8 
+
+
+code 
+    .token.comment 
+        color #d73a49
+        font-family system-ui
